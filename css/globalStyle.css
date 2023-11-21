@@ -1,0 +1,97 @@
+/* btn */
+.btn {
+    border: 1px solid transparent;
+    border-radius: 25px;
+    padding: 0px 20px;
+    font-weight: 700!important;
+    line-height: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    white-space: initial;
+    transition: 0.2s ease;
+    cursor: pointer;
+    height: 45px;
+    margin-left: 10px;
+    position: relative;
+    font-family: "Blinker", sans-serif;
+    text-transform: none;
+    font-size: 12px;
+    text-shadow: none;
+    margin-bottom: 10px;
+}
+
+.btn.reg {
+    background: linear-gradient(180deg, #F1592C 0%, #CF3020 100%);
+    color: #ffffff;
+    text-shadow: 0.3px 0px #ffffff;
+}
+
+.btn.log {
+    background: linear-gradient(180deg, #FD0 0%, #FFB62B 100%);
+    color: #191A2A;
+    text-shadow: 0.3px 0px #191A2A;
+}
+
+.btn.info {
+    background: linear-gradient(180deg, #FD0 0%, #FFB62B 100%);
+    color: #191A2A;
+    text-shadow: 0.3px 0px #191A2A;
+    max-width: 50%;
+}
+
+.btn.cardd {
+    width: 50%;
+}
+
+.btn.log::after {
+    background: #ffffff;
+}
+
+.btn.reg::after {
+    background: #FFB62B;
+}
+
+
+
+.btn::after {
+    content: "";
+    display: flex;
+    border-radius: 23px;
+    width: 100%;
+    height: calc(100% + 4px);
+    top: -1px;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.btn:hover {
+     box-shadow: 0px 0px 6px #FFB62B;
+}
+
+.btn > img {
+    width: 22px;
+}
+
+/* color */
+
+.color-text-white, .color-text-black {
+    font-weight: 400;
+    line-height: initial;
+    font-size: 14px;
+    line-height: initial;
+    font-family: "Blinker", sans-serif;
+    text-transform: none;
+    font-size: 12px;
+    text-shadow: none;
+}
+.color-text-white {
+    color: #fff;
+}
+
+.color-text-black {
+    color: #191A2A;
+}
+

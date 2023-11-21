@@ -1,0 +1,16 @@
+.scroll-btn {
+    position: fixed;
+    right: 15px;
+    font-size: 22px;
+    bottom: 30%;
+    font-size: 45px;
+    color: #FFB62B;
+    z-index: 100;
+    transition: 0.2s ease;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-btn:hover {
+    color: #fff;
+}

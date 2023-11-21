@@ -1,0 +1,444 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://luckymister77.com/assets/969f29c7/images/bg/header_bg.svg");
+    background-color: #191A2A;
+    order: -1;
+    color: white;
+    height: 65px;
+    width: 100%;
+    padding-left: 97px;
+    padding-right: 32px;
+    position: relative;
+    z-index: 0;
+}
+
+main {
+    padding-left: 55px;
+}
+
+.header-logo {
+    height: 100%;
+}
+
+.header-logo > img {
+    display: block;
+    height: 100%;
+    max-width: 167px;
+}
+
+.header-block_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* nav */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-image: url("	https://luckymister77.com/assets/969f29c7/images/bg/sidebar_bg.svg");
+    background-color: #191A2A;;
+}
+
+.navigation-btn {
+    color: #ffffff;
+    background: linear-gradient(180deg, #F1592C 0%, #FFB62B 100%);
+    background-size: cover;
+    width: 65px;
+    height: 65px;
+    position: relative;
+}
+
+.navigation-btn:after, .navigation-btn:before,.navigation-btn > span {
+    content: "";
+    position: absolute;
+    top: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2.5px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.navigation-btn > span {
+    top: 30px;
+    width: 25px;
+    margin-left: 2.5px;
+}
+
+.navigation-btn:after {
+    top: 37px;
+}
+
+.navigation-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    max-width: 65px;
+    overflow: hidden;
+}
+
+.navigation-list {
+    list-style-type: none;
+    margin-bottom: 8px;
+}
+
+.navigation-link {
+    text-align: center;
+    display: none;
+}
+
+.navigation-list > button {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+}
+
+.nav-icon {
+    color: #fff;
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.nav-icon:hover {
+    color: #FFB62B;
+}
+
+/* main */
+
+#myCarousel, #myCarousel > .carousel-inner, .carousel-item {
+    height: 339px;
+}
+
+.carousel-item-img {
+    height: 339px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.carousel-indicators {
+    margin-right: 0;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.carousel-indicators > .slide {
+    margin: 0 6px;
+    border-radius: 50%;
+    color: transparent;
+    padding: 5px;
+    background: #fff;
+    display: block;
+    height: 10px;
+    width: 10px;
+    border: 0;
+    position: relative;
+}
+
+.carousel-indicators > .slide.active:before {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height:55%  ;
+    width: 55%;
+    background-color: rgb(245, 46, 46);
+}
+
+.carousel-info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 50px;
+    backdrop-filter: blur(24px);
+    -webkit-mask-image: linear-gradient(to right, #000 71%, #0000 100%);
+    mask-image: linear-gradient(to right, #000 71%, #0000 100%);
+}
+
+.info-text > span{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 41.45px;
+    font-weight: 600;
+}
+
+.info-text > span:nth-of-type(2) {
+    font-size: 40px;
+}
+
+/* tabs */
+
+.nav-item .active {
+    background: linear-gradient(180deg, #F1592C 0%, #FFB62B 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    margin: 0 7px;
+    
+}
+
+.nav-item {
+    background: linear-gradient(180deg, #fff 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Blinker", sans-serif;
+    position: relative;
+    margin: 0 7px;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center; 
+    color: #fff;
+    
+}
+
+.item-link {
+    background: linear-gradient(180deg, #F1ff592C 0%, #FFB62B 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Blinker", sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav-tabs {
+    border-bottom: none;
+    flex: 1;
+    align-items: center;
+    margin: 0 12px 0 0;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    outline: none;
+}
+
+.nav-item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5px;
+    border-radius: 3px 3px 0 0 ;
+    background: linear-gradient(180deg, #F1592C 0%, #FFB62B 100%);
+    display: none;
+}
+
+.nav-item:hover:after, .nav-item .active {
+    display: block;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    isolation: auto;
+}
+
+/* card tab */
+
+.card-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 24%;
+    margin: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-description:hover .card-block {
+    visibility:visible;
+    background-color: #000000ce;
+}
+
+.card-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 25px 0 20px 0;
+
+}
+
+.card-footer {
+    text-align: center;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.card-description {
+    position: relative;
+    height: 100%;
+    background-size: cover;
+    object-fit: fill;
+}
+
+.card-block {
+    visibility:hidden;
+}
+
+.card-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card-footer {
+    color: #000;
+}
+
+/* footer */
+
+footer {
+    background-color: #070817;
+    margin-top: 50px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.footer-link {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.footer-link > a {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s ease;
+    font-family: "Blinker", sans-serif;
+}
+
+.footer-link > a:hover{
+    color: #FFB62B;
+}
+
+.language {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.language > img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.language > span {
+    text-shadow: 0 0 4px #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* card */
+.visa-card {
+    background-color: #191A2A;
+    padding: 40px;
+    border-radius: 15px;
+    margin: 0 auto 40px;
+    width: calc(100% - 10px);
+    max-width: max-content;
+    border: 2px solid #252525;
+}
+
+.visa-card-img {
+    width: 100px;
+    height: 40px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.company-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.company-list > li {
+    width: 120px;
+    height: 50px;
+    list-style-type: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.footer-icon-18 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-icon-18 > img {
+    margin-bottom: 20px;
+    width: 180px;
+    height: 65px;
+}
+
+.copy {
+    font-family: "Blinker", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+   text-align: center;
+    padding-bottom: 15px;
+    margin: 0;
+}
