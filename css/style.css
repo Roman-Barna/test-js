@@ -4,13 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #191A2A
+}
+
 /* header */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url("https://luckymister77.com/assets/969f29c7/images/bg/header_bg.svg");
+    background-image: url("../images/icons/header_bg.svg");
     background-color: #191A2A;
     order: -1;
     color: white;
@@ -42,6 +46,14 @@ main {
     align-items: center;
 }
 
+.response.log {
+    display: none;
+}
+.response.log > .bi-door-open {
+    color: #fff;
+   font-size: 20px;
+}
+
 /* nav */
 
 .navigation {
@@ -49,8 +61,9 @@ main {
     top: 0;
     left: 0;
     z-index: 1000;
-    border-image: url("	https://luckymister77.com/assets/969f29c7/images/bg/sidebar_bg.svg");
+    border-image: url("../images/icons/sidebar_bg.svg");
     background-color: #191A2A;;
+    height: 100%;
 }
 
 .navigation-btn {
@@ -112,6 +125,10 @@ main {
     border: none;
 }
 
+.navigation-list > button > i {
+    font-size: 24px;
+}
+
 .nav-icon {
     color: #fff;
     font-size: 22px;
@@ -124,16 +141,78 @@ main {
     color: #FFB62B;
 }
 
-/* main */
-
-#myCarousel, #myCarousel > .carousel-inner, .carousel-item {
-    height: 339px;
+.static_menu {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    display: none;
+    width: 100%;
+    padding: 0px 32px 16px;
+    z-index: 4;
 }
 
+/* mobile-menu */
+
+.navigation-mobile {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 0px 32px 16px;
+    z-index: 4;
+    display: none;
+}
+
+.navigation-content {
+    display: flex;
+    width: 100%;
+    min-height: 58px;
+    border-radius: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    background: rgb(247, 247, 247);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px;
+    padding: 0;
+}
+
+.navigation-item {
+    flex: 1 1 0%;
+    list-style-type: none;
+    border-radius: 5px !important;
+}
+
+.navigation-item-btn {
+    height: 100%;
+    border: none;
+    padding: 2px 5px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.navigation-item-btn > i {
+    font-size: 22px;
+}
+
+.navigation-item-btn.active {
+    color: #fff;
+    background: linear-gradient(180deg, #F1592C 0%, #CF3020 100%);
+    text-decoration: none;
+    white-space: initial;
+    text-transform: none;
+    user-select: none;
+}
+
+/* main */
+
 .carousel-item-img {
-    height: 339px;
-    background-size: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    background-size: cover;
     background-repeat: no-repeat;
+}
+
+.info-block.response {
+    display: none;
 }
 
 .carousel-indicators {
@@ -175,7 +254,7 @@ main {
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    padding: 0 50px;
+    padding: 50px;
     backdrop-filter: blur(24px);
     -webkit-mask-image: linear-gradient(to right, #000 71%, #0000 100%);
     mask-image: linear-gradient(to right, #000 71%, #0000 100%);
@@ -194,6 +273,10 @@ main {
 
 /* tabs */
 
+.tabs {
+    padding: 0 15px;
+}
+
 .nav-item .active {
     background: linear-gradient(180deg, #F1592C 0%, #FFB62B 100%);
     background-clip: text;
@@ -201,7 +284,13 @@ main {
     -webkit-text-fill-color: transparent;
     position: relative;
     margin: 0 7px;
-    
+}
+
+.nav-item > button > i  {
+    background: linear-gradient(180deg, #fff 0%, #fff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-item {
@@ -216,17 +305,21 @@ main {
     display: flex;
     justify-content: center; 
     color: #fff;
-    
 }
 
-.item-link {
-    background: linear-gradient(180deg, #F1ff592C 0%, #FFB62B 100%);
+.nav-link  {
+    background: linear-gradient(180deg, #F1ff592C 0%, #ffffff 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: "Blinker", sans-serif;
     font-weight: 600;
     color: #fff;
+}
+
+.nav-link > i {
+    font-size: 13px;
+    margin-right: 7px;
 }
 
 .nav-tabs {
@@ -241,7 +334,7 @@ main {
     outline: none;
 }
 
-.nav-item:after {
+.nav-item:after  {
     content: "";
     position: absolute;
     bottom: 0;
@@ -253,8 +346,15 @@ main {
     display: none;
 }
 
-.nav-item:hover:after, .nav-item .active {
+.nav-item:hover:after, .nav-item.active:after {
     display: block;
+}
+
+.nav-item:hover {
+    background: linear-gradient(180deg, #F1592C 0%, #FFB62B 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
@@ -271,13 +371,21 @@ main {
 }
 
 .card {
-    width: 24%;
+    width: 23.5%;
     margin: 6px;
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
-.card-description:hover .card-block {
+.card:hover .card-footer span:first-child{
+    display: none;
+}
+.card:hover .card-footer span:last-child{
+    display: block;
+}
+
+.card:hover .card-block {
     visibility:visible;
     background-color: #000000ce;
 }
@@ -327,13 +435,27 @@ main {
     color: #000;
 }
 
+.card-footer span:first-child {
+    display: block;
+}
+
+.card-footer span:last-child {
+    display: none;
+}
+
+.card-footer span:last-child > i {
+    background-color: #000;
+    color: #fff;
+    margin-right: 10px;
+}
+
 /* footer */
 
 footer {
     background-color: #070817;
     margin-top: 50px;
     padding-top: 10px;
-    position: relative;
+    
 }
 
 .footer-links {
@@ -342,6 +464,7 @@ footer {
     align-items: center;
     flex-wrap: wrap;
     padding: 0 50px;
+    position: relative;
 }
 
 .footer-link {
@@ -349,6 +472,7 @@ footer {
     text-align: center;
     margin-bottom: 20px;
     padding: 10px;
+    list-style-type: none;
 }
 
 .footer-link > a {
@@ -387,6 +511,7 @@ footer {
 
 /* card */
 .visa-card {
+
     background-color: #191A2A;
     padding: 40px;
     border-radius: 15px;
@@ -441,4 +566,209 @@ footer {
    text-align: center;
     padding-bottom: 15px;
     margin: 0;
+}
+
+/* media */
+
+@media (max-width: 1024px) {
+    .carousel-info {
+        visibility: hidden;
+    }    
+
+    .carousel-indicators {
+        justify-content: center;
+        margin-left: 0;
+        top: 50%;
+    }
+
+    .info-block.response {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info-block > button {
+        width: 20%;
+        margin-top: -10px;
+    }
+    
+    .info-text > span {
+        line-height: 20px;
+    }
+
+    /* card */
+
+    .card {
+        width: 31%;
+        height: 100%;
+    }
+
+    .btn.cardd.log {
+        display: none;
+    }
+
+    /* footer */
+
+    .footer-links {
+        margin-bottom: 50px;
+    }
+
+    .footer-link {
+        width: 100%;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .company-list {
+        padding: 0 50px;
+    }
+
+    .language {
+        position: absolute;
+        top: 100%;
+        left: 49%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-left: 75px;
+    }
+    
+    .navigation-lists {
+        display: none;
+    }
+
+    .navigation {
+        height: 0;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    .tab-content {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* scroll */
+
+    .scroll-btn {
+        bottom: 12%;
+        opacity: 0.5;
+    }
+
+    header {
+        padding-left: 60px;
+        padding-right: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navigation-btn {
+        width: 55px;
+        height: 55px;
+        position: fixed;
+        z-index: 1000;
+    }
+
+    .header-logo > img {
+        max-width: 127px; 
+    }
+
+    .header-block_btn .btn.log {
+        display: none;
+    }
+
+    .response.log{
+       display: block;
+       padding: 0 5px;
+    }
+
+    /* main */
+
+    main {
+        margin-top: 55px;
+    }
+
+    /* slider */
+
+    .carousel-info {
+        padding: 0;
+    }
+
+    .carousel-indicators {
+        top: 38%;
+    }
+
+    .carousel-indicators > .slide {
+        width: 1px;
+        height: 1px;
+        margin: 0 3px;
+    }
+
+    .info-block > button {
+        width: 50%;
+        margin-top: -10px;
+    }
+
+    .info-text > span {
+        line-height: 10px;
+        font-size: 14px!important;
+    }
+
+    /* tabs */
+
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    /* card */
+
+    .card {
+        width: 45%;
+    }
+
+    /* footer */
+
+    .company-list {
+        padding: 0;
+    }
+
+    .visa-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .language {
+        left: 46%;
+    }
+
+    /* navigation-btn */
+    .navigation-btn:before {
+        top: 17px;
+    }
+    
+    .navigation-btn > span {
+        top: 22px;
+    }
+    
+    .navigation-btn:after {
+        top: 27px;
+    }
+
+    .navigation-mobile {
+        display: block;
+    }
 }
