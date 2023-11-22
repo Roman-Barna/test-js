@@ -9,6 +9,7 @@
     transition: 0.2s ease;
     cursor: pointer;
     display: none;
+    opacity: 0.5;
 }
 
 .scroll-btn:hover {

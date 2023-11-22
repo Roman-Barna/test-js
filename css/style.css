@@ -660,8 +660,7 @@ footer {
     /* scroll */
 
     .scroll-btn {
-        bottom: 12%;
-        opacity: 0.5;
+        bottom: 20%;
     }
 
     header {
